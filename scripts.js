@@ -56,14 +56,14 @@ function scrub(e) {
 /* View in fullscreen */
 function startFullScreen() {
 	if (video.requestFullscreen) {
-    	video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) { /* Firefox */
-    	video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    	video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { /* IE/Edge */
-    	video.msRequestFullscreen();
-    }
+    		video.requestFullscreen();
+	} else if (video.mozRequestFullScreen) { /* Firefox */
+    		video.mozRequestFullScreen();
+	} else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+		video.webkitRequestFullscreen();
+	} else if (video.msRequestFullscreen) { /* IE/Edge */
+		video.msRequestFullscreen();
+	}
 }
 
 /* close fullscreen controls after exit fullscreen */
@@ -78,7 +78,6 @@ function closeFullscreen() {
 		document.msExitFullscreen();
 	}
 }
-
 //hook up event listeners
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
